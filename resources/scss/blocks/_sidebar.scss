@@ -1,0 +1,166 @@
+.sidebar {
+    padding-bottom: 200px;
+    min-width: 300px;
+    max-width: 300px;
+    height: 100%;
+    background: #202020;
+    box-shadow: 5px 0px 15px 0px rgba(5, 5, 5, 0.10);
+    z-index: 100;
+    &__background {
+        z-index: 101;
+    }
+    &__data {
+        margin-top: -50px;
+    }
+    &__profile {
+        display: flex;
+        justify-content: center;
+        z-index: 30;
+        &_block {
+            max-width: 100px;
+            max-height: 100px;
+            border-radius: 100px;
+            border: 2px solid #FFF;
+            box-shadow: 0px 7px 20px 0px rgba(0, 0, 0, 0.25);
+            overflow: hidden;
+        }
+        &_photo {
+            width: 100%;
+            height: 100%;
+            border-radius: 100px;
+        }
+        &_username {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 400;
+            color: #FFF;
+        }
+        &_work {
+            margin-top: 3px;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 300;
+            color: #DEDEDE;
+        }
+        &_description {
+            margin: 0px 20px;
+            padding: 30px 0px;
+            text-align: center;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 18px;
+            border-top: 2px solid #1C1C1C;
+            border-bottom: 2px solid #1C1C1C;
+            color: #FFF;
+        }
+    }
+    &__home_link {
+        display: none;
+    }
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+        margin: 0px 25px;
+        padding: 30px 0px;
+        border-top: 2px solid #1C1C1C;
+        border-bottom: 2px solid #1C1C1C;
+        &_button {
+            display: flex;
+            justify-content: center;
+            max-width: 120px;
+            width: 100%;
+            height: 40px;
+            padding: 0px 20px;
+            align-items: center;
+            font-size: 12px;
+            font-weight: 500;
+            border-radius: 25px;
+            color: #FFF;
+            cursor: pointer;
+            z-index: 50;
+        }
+        &_portfolio {
+            background: #ED3024;
+            box-shadow: 0px 7px 17px -10px rgba(242, 63, 63, 0.20);
+        }
+        &_portfolio:hover {
+            background: #a5180e;
+            transition: all .3s ease-in-out;
+        }
+        &_message {
+            right: 0;
+            background: #3137C9;
+            box-shadow: 0px 7px 17px -10px rgba(32, 84, 219, 0.35);
+        }
+        &_message:hover {
+            background: #16197c;
+            transition: all .3s ease-in-out;
+        }
+    }
+    &__admin {
+        display: flex;
+        justify-content: center;
+        margin: 30px 0px;
+        &_button {
+            background-color: #3c3c3c;
+            max-width: 200px;
+            align-items: center;
+        }
+        &_button:hover {
+            background-color: #616161;
+            transition: all .3s ease-in-out;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: absolute;
+        margin-left: -300px;
+        min-height: 800px;
+        transition: all 0.3s;
+        &__active {
+            margin-left: 0px;
+        }
+        &__data {
+            display: flex;
+            margin: -15px 0px 10px 15px;
+        }
+        &__profile {
+            &_user-block {
+                display: flex;
+                flex-direction: column;
+                margin-left: 10px;
+            }
+            &_block {
+                max-width: 65px;
+                max-height: 65px;
+            }
+            &_username {
+                margin-top: 25px;
+                text-align: start;
+                font-size: 15px;
+            }
+            &_work {
+                margin-top: 2px;
+                margin-bottom: 0px;
+                text-align: start;
+                font-size: 12px;
+                font-weight: 300;
+            }
+        }
+        &__home_link {
+            display: flex;
+            justify-content: start;
+            margin: 30px 0px 30px 30px;
+            font-size: 16px;
+            font-weight: 300;
+            color: #FFF;
+        }
+        &__home_link:hover {
+            color: #3137C9;
+        }
+    }
+}

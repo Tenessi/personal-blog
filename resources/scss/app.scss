@@ -1,0 +1,24 @@
+@import 'blocks/header';
+@import 'blocks/sidebar';
+@import 'blocks/main';
+@import 'blocks/login';
+@import 'blocks/admin/admin';
+@import 'blocks/post/post';
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+.container {
+    max-width: 1240px;
+    width: 100%;
+    display: flex;
+}
+
+.layout {
+    background: #181818;
+    width: 100%;
+    color: #fff;
+}

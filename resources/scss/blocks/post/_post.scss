@@ -1,0 +1,109 @@
+.post {
+    padding: 60px 50px;
+    &__container {
+        padding: 15px 25px 40px 25px;
+        border-radius: 5px;
+        box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.35);
+        background: #202020;
+    }
+    &__back {
+        font-size: 12px;
+        font-weight: 400;
+        color: #FFF;
+        opacity: 0.6;
+    }
+    &__back:hover {
+        opacity: 1;
+    }
+    &__title {
+        margin-top: 15px;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 21px;
+        color: #FFF;
+    }
+    &__created {
+        display: flex;
+        margin-top: 5px;
+        &_item {
+            font-size: 12px;
+            font-weight: 400;
+            font-family: Lato;
+            color: #828282;
+        }
+        &_item:not(:last-child) {
+            margin-right: 10px;
+        }
+        &_dot {
+            color: #C4C4C4;
+        }
+    }
+    &__content {
+        margin-top: 30px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #1C1C1C;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        color: #FFF;
+    }
+    &__interesting {
+        margin-top: 30px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #1C1C1C;
+        &_title {
+            font-size: 16px;
+            font-weight: 500;
+            color: #FFF;
+        }
+        &_block {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &_post {
+            margin-top: 25px;
+            flex: 1 1 50%;
+            transition: all .2s;
+        }
+        &_post:hover{
+            padding-left: 15px;
+        }
+        &_post-title {
+            font-size: 14px;
+            font-weight: 500;
+            color: #F3EBA2;
+        }
+        &_post-date {
+            margin-top: 5px;
+            font-family: Lato;
+            font-size: 12px;
+            font-weight: 400;
+            color: #828282;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .post {
+        padding: 20px 15px;
+    }
+}
+@media (max-width: 768px) {
+    .post {
+        &__container {
+            padding: 15px 15px 40px 15px;
+            border-radius: 5px;
+            box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.35);
+            background: #202020;
+        }
+    }
+}
+@media (max-width: 480px) {
+    .post {
+        &__interesting {
+            &_post {
+                flex: 1 1 100%;
+            }
+        }
+    }
+}
